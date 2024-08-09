@@ -1,0 +1,18 @@
+desining dfa and nfa
+dfa minimization
+e-nfa
+e-nfa to dfa
+finite automata and regular expression equivalence
+arden's therom {statement, proof and application}
+pumping lemma for regular expression
+context free grammer
+ambiguity and simplification of cdg
+cnf and gnf
+equivalence of cfl and cfg
+pumping lemma for cfl
+decidability of cfg
+pda design and dpda
+turing machine {basic model, designing of single take turing machine
+halting problem}
+post correspondence problem
+properties of recursive and recursively enumerable language

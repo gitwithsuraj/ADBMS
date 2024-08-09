@@ -1,0 +1,50 @@
+--->View:
+create view <viewname> AS
+col1, col2
+from tablename
+where condition;
+(where condition is used when we have to give any condition if not we will not use it)
+
+--->View from multiple tables:
+create view <viewname> as
+select t1.col1, t1.col3, t2.col2
+from t1, t2
+where t1.col1=t2.col1
+
+--->Index:
+create index <indexname>
+ON tablename col.name;
+--->Index in multiple col
+create index indexname
+on tablename(col1,col2)
+--->Index unique:
+create unique index <indexname>
+ON tablename col.name;
+--->Index alter:
+alter index <indexname>
+ON tablename col.name;
+--->Index drop:
+drop index tablename.indexname
+
+1.
+CREATE TABLE EMPLOYEES (
+    Employee_id CHAR(10) PRIMARY KEY,
+    First_Name CHAR(30) NOT NULL,
+    Last_Name CHAR(30) NOT NULL,
+    DOB DATE,
+    Salary DECIMAL(25, 2) NOT NULL,
+    Department_id CHAR(10)
+);
+
+INSERT ALL 
+    INTO EMPLOYEES (Employee_id, First_Name, Last_Name, DOB, Salary, Department_id) VALUES ('EMP001', 'Jay', 'Dutt', TO_DATE('15-MAY-20', 'DD-MON-RR'), 50000.00, 'DEPT001')
+    INTO EMPLOYEES (Employee_id, First_Name, Last_Name, DOB, Salary, Department_id) VALUES('EMP002', 'Jane', 'Smith', TO_DATE('17-DEC-80', 'DD-MON-RR'), 60000.00, 'DEPT002')
+    INTO EMPLOYEES (Employee_id, First_Name, Last_Name, DOB, Salary, Department_id) VALUES('EMP003', 'Mishel', 'Megan', TO_DATE('20-FEB-81', 'DD-MON-RR'), 55000.00, 'DEPT001')
+    INTO EMPLOYEES (Employee_id, First_Name, Last_Name, DOB, Salary, Department_id) VALUES('EMP004', 'Emily', 'Bobby', TO_DATE('22-FEB-81', 'DD-MON-RR'), 52000.00, 'DEPT003')
+    INTO EMPLOYEES (Employee_id, First_Name, Last_Name, DOB, Salary, Department_id) VALUES('EMP005', 'David', 'Wilson', TO_DATE('02-APR-81', 'DD-MON-RR'), 58000.00, 'DEPT002')
+    INTO EMPLOYEES (Employee_id, First_Name, Last_Name, DOB, Salary, Department_id) VALUES('EMP006', 'Sarah', 'Jones', TO_DATE('28-SEP-81', 'DD-MON-RR'), 53000.00, 'DEPT001')
+SELECT * FROM dual;
+
+INSERT INTO emp_view (Employee_id, Last_Name, Salary, Department_id) VALUES ('EMP010', 'John', 62000.00, 'DEPT002'); 
+
+ 
